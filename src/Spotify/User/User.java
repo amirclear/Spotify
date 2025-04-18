@@ -65,16 +65,16 @@ public class User {
         }
     }
 
-    public void createPlayList(String title , User owner) {
-        this.behavior.createPlaylist(title, owner);
+    public void createPlayList(String title) {
+        this.behavior.createPlaylist(title, this);
     }
 
     public void playMusic(Music music) {
         this.behavior.playMusic(music);
     }
 
-    public void buyPremium(User owner, int month) {
-        behavior.buyPremium(owner, month);
+    public void buyPremium(int month) {
+        behavior.buyPremium(this, month);
     }
 
     public String getUsername() {
